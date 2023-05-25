@@ -1,0 +1,22 @@
+{
+  "name": "cypress.cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.12.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^17.1.1",
+    "cypress-real-events": "^1.8.1"
+  },
+  "ng-recaptcha": "^7.0.1",
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e",
+    "nonGlobalStepDefinitions": false
+  }
+}
