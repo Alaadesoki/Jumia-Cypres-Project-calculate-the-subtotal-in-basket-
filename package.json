@@ -1,0 +1,35 @@
+{
+  "name": "cypress.cucumber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "scripts": {
+    "test": "cypress open",
+    "delete:reportFolder": "rm -rf mochawesome-report/",
+    "test:cli": "npm run delete:reportFolder && cypress run",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
+"create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
+
+  },
+
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.5.0",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^17.1.1",
+    "cypress-real-events": "^1.8.1",
+    "minimist": "^1.2.8"
+  },
+  "ng-recaptcha": "^7.0.1",
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e",
+    "nonGlobalStepDefinitions": false
+  }
+}
